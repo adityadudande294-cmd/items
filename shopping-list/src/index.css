@@ -1,0 +1,132 @@
+:root {
+  --text: #5a4a6b;
+  --text-h: #2a1f3d;
+  --bg: linear-gradient(135deg, #ffe4ec, #ffd6f5);
+  --border: #f3c6e3;
+  --code-bg: #fff0f8;
+
+  /* 🔥 Pink Theme */
+  --accent: #ff4da6;
+  --accent-bg: rgba(255, 77, 166, 0.15);
+  --accent-border: rgba(255, 77, 166, 0.5);
+
+  --shadow:
+    rgba(255, 77, 166, 0.2) 0 10px 20px,
+    rgba(0, 0, 0, 0.1) 0 4px 10px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* 🔥 Dark Mode Pink Glow */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #ffd6f5;
+    --text-h: #ffffff;
+    --bg: linear-gradient(135deg, #1a001f, #330033);
+    --border: #4d004d;
+    --code-bg: #2a002a;
+
+    --accent: #ff66cc;
+    --accent-bg: rgba(255, 102, 204, 0.2);
+    --accent-border: rgba(255, 102, 204, 0.6);
+
+    --shadow:
+      rgba(255, 102, 204, 0.3) 0 10px 25px,
+      rgba(0, 0, 0, 0.4) 0 4px 10px;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+/* main container */
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🔥 CARD STYLE */
+.App {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+/* heading glow */
+h1 {
+  font-size: 48px;
+  color: var(--accent);
+  text-shadow: 0 0 10px rgba(255, 77, 166, 0.4);
+}
+
+/* input */
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  outline: none;
+}
+
+/* button */
+button {
+  padding: 10px 14px;
+  margin-left: 8px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* hover glow */
+button:hover {
+  background: #ff1a8c;
+  box-shadow: 0 0 10px rgba(255, 77, 166, 0.6);
+}
+
+/* list */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* item */
+li {
+  background: rgba(255, 255, 255, 0.7);
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+
+/* hover effect */
+li:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(255, 77, 166, 0.3);
+}
+
+/* buy button */
+li button {
+  background: #ff4da6;
+}
+
+li button:hover {
+  background: #ff1a8c;
+}
